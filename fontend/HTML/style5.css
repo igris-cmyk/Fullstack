@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #4a90e2;
+  --dark: #1a1a2e;
+  --light: #f5f5f5;
+  --white: #ffffff;
+  --radius: 10px;
+  --transition: 0.3s ease;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light);
+  padding: 40px;
+}
+
+h2 {
+  color: var(--dark);
+  margin: 30px 0 15px 0;
+}
+
+/* Task 2 - Hover Cards */
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px 30px;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Task 3 - Animated Button */
+.btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--dark);
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Task 4 - Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
